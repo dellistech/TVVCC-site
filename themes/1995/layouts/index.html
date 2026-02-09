@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
 
 <CENTER>
-<H2>Welcome!</H2>
+<H2>Welcome</H2>
 </CENTER>
 
 <BLOCKQUOTE>
 {{ with .Site.Params.welcomeText }}
-<P>{{ . }}</P>
+{{ . | safeHTML }}
 {{ else }}
 <P>Welcome to the {{ .Site.Title }} website!</P>
 {{ end }}

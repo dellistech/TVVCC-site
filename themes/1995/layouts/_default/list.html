@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<H2>{{ .Title }}</H2>
+
+{{ $pages := .Pages }}
+{{ if $pages }}
+<UL>
+{{ range $pages }}
+<LI><A HREF="{{ .RelPermalink }}"><B>{{ .Title }}</B></A> - <I>{{ .Date.Format "January 2, 2006" }}</I>
+{{ if .Description }}<BR><FONT SIZE="2">{{ .Description }}</FONT>{{ end }}
+{{ end }}
+</UL>
+{{ else }}
+<P><I>Nothing here yet.</I></P>
+{{ end }}
+
+{{ partial "footer.html" . }}

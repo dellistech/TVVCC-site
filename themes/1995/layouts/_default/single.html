@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+<H2>{{ .Title }}</H2>
+
+<FONT SIZE="2">
+<I>Posted {{ .Date.Format "January 2, 2006" }}{{ with .Params.author }} by {{ . }}{{ end }}</I>
+</FONT>
+
+<HR NOSHADE SIZE="1">
+
+{{ .Content }}
+
+<HR NOSHADE SIZE="1">
+
+<P>
+<A HREF="/posts/">&lt;&lt; Back to Posts</A>
+</P>
+
+{{ partial "footer.html" . }}

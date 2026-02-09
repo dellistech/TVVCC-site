@@ -1,0 +1,9 @@
+name = "Vintage"
+license = "MIT"
+licenselink = ""
+description = "An HTML 3.2 theme for Hugo. Works in Mosaic, Netscape Navigator, Lynx, and modern browsers."
+tags = ["retro", "vintage", "minimal", "html32"]
+min_version = "0.80.0"
+
+[author]
+  name = "TVVCC"

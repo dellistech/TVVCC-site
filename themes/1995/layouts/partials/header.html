@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</TITLE>
+<META NAME="description" CONTENT="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.subtitle }}{{ . }}{{ end }}{{ end }}">
+{{ with .Site.Params.keywords }}<META NAME="keywords" CONTENT="{{ . }}">{{ end }}
+<LINK REL="canonical" HREF="{{ .Permalink }}">
+{{ template "_internal/opengraph.html" . }}
+{{ partial "jsonld.html" . }}
+</HEAD>
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+
+<CENTER>
+<img src="/images/tvvcc.gif" alt="TVVCC Logo", width="25%">
+<H1>{{ .Site.Title }}</H1>
+<I>{{ .Site.Params.subtitle }}</I>
+</CENTER>
+
+<HR>
+
+<CENTER>
+<A HREF="/">Home</A> |
+<A HREF="/posts/">Posts</A> |
+<A HREF="/about/">About</A>
+{{ with .Site.Params.discordURL }}|
+<A HREF="{{ . }}">Discord</A>{{ end }}
+</CENTER>
+
+<HR>

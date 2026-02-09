@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+
+<CENTER>
+<H2>Welcome!</H2>
+</CENTER>
+
+<BLOCKQUOTE>
+{{ with .Site.Params.welcomeText }}
+<P>{{ . }}</P>
+{{ else }}
+<P>Welcome to the {{ .Site.Title }} website!</P>
+{{ end }}
+</BLOCKQUOTE>
+
+<HR NOSHADE>
+
+<H2>Latest Posts</H2>
+
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ if $posts }}
+<UL>
+{{ range first 10 $posts }}
+<LI><A HREF="{{ .RelPermalink }}"><B>{{ .Title }}</B></A> - <I>{{ .Date.Format "January 2, 2006" }}</I>
+{{ end }}
+</UL>
+{{ else }}
+<P><I>No posts yet. Check back soon!</I></P>
+{{ end }}
+
+{{ partial "footer.html" . }}

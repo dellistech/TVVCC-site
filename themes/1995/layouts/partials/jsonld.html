@@ -1,0 +1,31 @@
+{{ if .IsHome -}}
+<SCRIPT TYPE="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ .Site.Title | htmlUnescape }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.subtitle | htmlUnescape }}"
+}
+</SCRIPT>
+{{ else if .IsPage -}}
+<SCRIPT TYPE="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title | htmlUnescape }}",
+  "url": "{{ .Permalink }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}"{{ with .Params.author }},
+  "author": {
+    "@type": "Person",
+    "name": "{{ . }}"
+  }{{ end }}{{ with .Description }},
+  "description": "{{ . | htmlUnescape }}"{{ end }},
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ $.Site.Title | htmlUnescape }}"
+  }
+}
+</SCRIPT>
+{{ end -}}

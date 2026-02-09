@@ -1,45 +1,14 @@
 baseURL = 'https://tvvcc.org/'
 languageCode = 'en-us'
 title = 'Treasure Valley Vintage Computer Club'
-theme = 're-terminal'
+theme = '1995'
+disableHugoGeneratorInject = true
 
 [params]
-  contentTypeName = "posts"
-  themeColor = "orange"
-  showMenuItems = 3
-  fullWidthTheme = false
-  centerTheme = true
-  readingTime = true
-  [params.banner]
-    dismissible = true
-    text = "Join our Discord!"
-    url = "https://discord.gg/Kb6atM39"
+  subtitle = "An open club for vintage computing enthusiasts in Boise, Idaho"
+  keywords = "Boise, retro, vintage, computer, computing, gaming, electronics"
+  discordURL = "https://discord.gg/QHU4cwrSTt"
+  welcomeText = "Welcome to the home of the Treasure Valley Vintage Computer Club! We are a Boise, ID based collective of vintage computing enthusiasts. Join us to share projects, get help with your vintage treasures, and connect with fellow retro computing fans."
 
-[languages]
-  [languages.en.params]
-    title = "Treasure Vally Vintage Computing Club"
-    subtitle = "Boise's premiere vintage computing club."
-    keywords = "Boise, retro, vintage, computer, computing, electronics"
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-
-    [languages.en.params.logo]
-      logoText = "Treasure Vally Vintage Computing Club"
-      logoHomeLink = "/"
-
-[languages.en.menu]
-  [[languages.en.menu.main]]
-    identifier = "submenu"
-    name = "Workbench"
-    weight = 10
-  [[languages.en.menu.main]]
-    identifier = "subabout"
-    name = "About"
-    url = "/about"
-    parent = "submenu"
-  [[languages.en.menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
+[pagination]
+  pagerSize = 10

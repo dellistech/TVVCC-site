@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static website for the **Treasure Valley Vintage Computer Club (TVVCC)** built with Hugo and deployed on Netlify. The site uses a custom `vintage` theme that outputs HTML 3.2 for compatibility with vintage browsers (Mosaic, Netscape Navigator, Lynx).
+Static website for the **Treasure Valley Vintage Computing Club (TVVCC)** built with Hugo and deployed on Netlify. The site uses a custom `vintage` theme that outputs HTML 3.2 for compatibility with vintage browsers (Mosaic, Netscape Navigator, Lynx).
 
 ## Commands
 

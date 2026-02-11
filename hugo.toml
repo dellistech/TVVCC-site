@@ -1,6 +1,6 @@
 baseURL = 'https://tvvcc.org/'
 languageCode = 'en-us'
-title = 'Treasure Valley Vintage Computer Club'
+title = 'Treasure Valley Vintage Computing Club'
 theme = '1995'
 disableHugoGeneratorInject = true
 

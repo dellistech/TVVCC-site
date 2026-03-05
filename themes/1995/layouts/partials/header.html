@@ -1,5 +1,6 @@
-<HTML>
+<HTML LANG="{{ .Site.LanguageCode | default "en" }}">
 <HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</TITLE>
 <META NAME="description" CONTENT="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.subtitle }}{{ . }}{{ end }}{{ end }}">
 {{ with .Site.Params.keywords }}<META NAME="keywords" CONTENT="{{ . }}">{{ end }}
